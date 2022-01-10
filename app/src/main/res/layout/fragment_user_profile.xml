@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="56dp"
+    android:paddingBottom="56dp"
+    tools:context=".ui.UserProfileFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecipesUserProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="220dp"
+        android:scrollbars="vertical" />
+
+    <ImageView
+        android:id="@+id/userAvatarProfile"
+        android:layout_width="103dp"
+        android:layout_height="94dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/no_image" />
+
+    <TextView
+        android:id="@+id/usernameUserProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userAvatarProfile"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/username"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/postsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userAvatarProfile"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/posted_recipes"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/bEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberOfRecipesLoggedUser"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/userAvatarProfile"
+        android:text="@string/edit_profile" />
+
+    <Button
+        android:id="@+id/bLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bEditProfile"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/bEditProfile"
+        android:text="@string/logout" />
+
+    <TextView
+        android:id="@+id/userNameProfile"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/userAvatarProfile"
+        android:text="User's name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/userCountryProfile"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="46dp"
+        android:layout_toEndOf="@+id/userAvatarProfile"
+        android:text="User's country"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/noRecipesLabelUserProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/recyclerViewRecipesUserProfile"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="196dp"
+        android:text="@string/no_recipes"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/numberOfRecipesLoggedUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userCountryProfile"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/userAvatarProfile"
+        android:text="@string/number_of_recipes"
+        android:textSize="16sp" />
+
+    <SearchView
+        android:id="@+id/searchViewRecipesUserProfile"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bEditProfile"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/postsLabel"
+        android:queryHint="@string/action_search" >
+
+    </SearchView>
+
+</RelativeLayout>

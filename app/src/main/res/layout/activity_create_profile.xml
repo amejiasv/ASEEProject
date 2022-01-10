@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CreateUserActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/userImageProfile"
+        android:layout_width="167dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/no_image" />
+
+    <Spinner
+        android:id="@+id/editSexProfile"
+        android:layout_width="160dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/sex_names"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCityProfile" />
+
+    <EditText
+        android:id="@+id/editUsernameProfile"
+        android:layout_width="167dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userImageProfile" />
+
+    <EditText
+        android:id="@+id/editPasswordProfile"
+        android:layout_width="340dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editNameProfile"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editNameProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editNameProfile" />
+
+    <EditText
+        android:id="@+id/editNameProfile"
+        android:layout_width="340dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editUsernameProfile" />
+
+    <Spinner
+        android:id="@+id/editCountryProfile"
+        android:layout_width="160dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:entries="@array/country_names"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmailProfile" />
+
+    <Spinner
+        android:id="@+id/editCityProfile"
+        android:layout_width="160dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/city_names"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmailProfile" />
+
+    <EditText
+        android:id="@+id/editEmailProfile"
+        android:layout_width="340dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/editPasswordProfile"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editPasswordProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editPasswordProfile" />
+
+    <Button
+        android:id="@+id/bConfirmProfile"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="8dp"
+        android:text="Confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSexProfile" />
+
+    <Button
+        android:id="@+id/bResetProfile"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="76dp"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateViewProfile" />
+
+    <TextView
+        android:id="@+id/dateViewProfile"
+        android:layout_width="97dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:hint="Date of birth"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/bDatePickerProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editCountryProfile" />
+
+    <ImageButton
+        android:id="@+id/bDatePickerProfile"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/rajah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCountryProfile"
+        app:srcCompat="@android:drawable/ic_menu_agenda"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/dateOfBirthLabelProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center_horizontal|top"
+        android:labelFor="@id/dateViewProfile"
+        android:text="Date of birth"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/bDatePickerProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editCountryProfile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

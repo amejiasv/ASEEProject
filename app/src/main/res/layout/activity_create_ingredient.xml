@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CreateIngredientActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ingredientImage"
+        android:layout_width="280dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        app:srcCompat="@drawable/no_image" />
+
+    <Button
+        android:id="@+id/bAddPhotoIngredient"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/add_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientImage" />
+
+    <Button
+        android:id="@+id/bRemovePhotoIngredient"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/remove_photo"
+        app:layout_constraintStart_toEndOf="@+id/bAddPhotoIngredient"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientImage" />
+
+    <EditText
+        android:id="@+id/editIngredientName"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:hint="@string/ingredient_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bRemovePhotoIngredient" />
+
+    <EditText
+        android:id="@+id/editIngredientDescription"
+        android:layout_width="340dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editIngredientName" />
+
+    <Button
+        android:id="@+id/bCreateIngredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/create_ingredient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mEditIngredientCategories" />
+
+    <EditText
+        android:id="@+id/editNRVIngredient"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="52dp"
+        android:ems="10"
+        android:hint="@string/kcal_per_100g"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editIngredientDescription" />
+
+    <TextView
+        android:id="@+id/descriptionBoxLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="8dp"
+        android:labelFor="@id/editIngredientDescription"
+        android:text="@string/description_label"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editIngredientName" />
+
+    <TextView
+        android:id="@+id/mEditIngredientCategories"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/edit_text"
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:gravity="center|left"
+        android:hint="@string/categories"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNRVIngredient" />
+
+    <TextView
+        android:id="@+id/NRVIngredientLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/nutritional_value"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editIngredientDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

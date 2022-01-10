@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="54dp"
+    android:background="@color/white"
+    tools:context=".ui.IngredientsListFragment">
+
+    <TextView
+        android:id="@+id/ingredientsLabelList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/ingredients"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <SearchView
+        android:id="@+id/searchViewIngredientList"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/ingredientsLabelList" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ingredientsListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addIngredientQuestion"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp" />
+
+</RelativeLayout>

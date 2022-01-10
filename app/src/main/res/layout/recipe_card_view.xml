@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/bFavouriteRecipeList"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/ic_favorite_red_24dp"
+            app:layout_constraintStart_toEndOf="@+id/recipeDurationList"
+            app:layout_constraintTop_toBottomOf="@+id/recipeImageList"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/bCommentRecipeList"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/ic_baseline_insert_comment_24dp"
+            app:layout_constraintStart_toEndOf="@+id/bFavouriteRecipeList"
+            app:layout_constraintTop_toBottomOf="@+id/recipeImageList"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
+
+        <Button
+            android:id="@+id/bShareRecipeList"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/share"
+            app:layout_constraintStart_toEndOf="@+id/bCommentRecipeList"
+            app:layout_constraintTop_toBottomOf="@+id/recipeImageList" />
+
+        <ImageView
+            android:id="@+id/recipeImageList"
+            android:layout_width="364dp"
+            android:layout_height="304dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/no_image" />
+
+        <TextView
+            android:id="@+id/recipeNameRecipeList"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="162dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:inputType="textMultiLine"
+            android:text="@string/recipe_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipeImageList" />
+
+        <TextView
+            android:id="@+id/recipeDurationList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:text="0 min."
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/recipeNameRecipeList"
+            app:layout_constraintTop_toBottomOf="@+id/recipeImageList" />
+
+        <TextView
+            android:id="@+id/recipeDifficultyList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/difficulty"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipeNameRecipeList" />
+
+        <TextView
+            android:id="@+id/recipeScoreList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/score"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipeDifficultyList" />
+
+        <RatingBar
+            android:id="@+id/difficultyRatingList"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toEndOf="@+id/recipeDifficultyList"
+            app:layout_constraintTop_toBottomOf="@+id/recipeNameRecipeList" />
+
+        <RatingBar
+            android:id="@+id/scoreRatingList"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/recipeScoreList"
+            app:layout_constraintTop_toBottomOf="@+id/difficultyRatingList" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

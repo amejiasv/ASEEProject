@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Instañam</string>
+    <string name="confirm_choice">Confirm</string>
+    <string name="cancel_choice">Cancel</string>
+    <string name="reset_choices">Reset</string>
+    <string name="add_ingredients">Add ingredients</string>
+    <string name="create_recipe">Create recipe</string>
+    <string name="add_photo">Add photo</string>
+    <string name="remove_photo">Remove photo</string>
+    <string name="add_recipe">Add recipe</string>
+    <string name="create_ingredient">Create ingredient</string>
+    <string name="nutritional_value">Nutritional value:</string>
+    <string name="description_label">Description</string>
+    <string name="duration_in_minutes">Duration (minutes)</string>
+    <string name="recipe_name">Recipe name</string>
+    <string name="ingredient_name">Ingredient name</string>
+    <string name="kcal_per_100g">kcal / 100g</string>
+    <string name="categories">Categories</string>
+    <string name="create_shop">Create shop</string>
+    <string name="shop_name">Shop name</string>
+    <string name="shop_address">Address</string>
+    <string name="new_account">New account</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="search_recipe_by_name_or_description">Search recipe by name or description...</string>
+    <string name="search_ingredient_by_name_or_description">Search ingredient by name or description...</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="posted_recipes">Posted recipes</string>
+    <string name="order_by">Order by:</string>
+    <string name="ingredient_description">Ingredient description</string>
+    <string name="product_categories">Product categories:</string>
+    <string name="action_search">Search</string>
+    <string name="where_to_buy">Where to buy</string>
+    <string name="nrv">NRV:</string>
+    <string name="new_ingredient_question">Did we miss an ingredient? Add it to out list!</string>
+    <string name="new_shop_question">Did we miss a shop? Add it to out list!</string>
+    <string name="follow">Follow</string>
+    <string name="recipe_information">Recipe information</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="comments">Comments</string>
+    <string name="shop_groceries">Shop groceries</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="score">Score</string>
+    <string name="add_comment">Add comment</string>
+    <string name="comment">Comment...</string>
+    <string name="create_user">Create user</string>
+    <string name="favourite_recipes">Favourite recipes</string>
+    <string name="recipes">Recipes</string>
+    <string name="number_of_recipes">Number of recipes:</string>
+    <string name="no_favourite_recipes">You have no favourite recipes yet!</string>
+    <string name="no_recipes">There are no recipes yet. Add one!</string>
+    <string name="logout">Logout</string>
+    <string name="list_view">List</string>
+    <string name="my_profile">My profile</string>
+    <string name="ingredient_info">Ingredient information</string>
+    <string name="add_ingredient">Add ingredient</string>
+    <string name="no_valorations">There are no valorations yet. Add one!</string>
+    <string name="valorations">Valorations</string>
+    <string-array name="city_names">
+        <item>Cáceres</item>
+        <item>Madrid</item>
+        <item>Barcelona</item>
+        <item>Granada</item>
+        <item>Paris</item>
+        <item>Rome</item>
+        <item>Berlin</item>
+    </string-array>
+    <string-array name="country_names">
+        <item>Spain</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Germany</item>
+    </string-array>
+    <string-array name="sex_names">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="categories_ingredient">
+        <item>Any</item>
+        <item>Fruit</item>
+        <item>Meat</item>
+        <item>Vegetable</item>
+        <item>Fish</item>
+        <item>Pasta</item>
+        <item>Rice</item>
+        <item>Grain</item>
+        <item>Cereal</item>
+        <item>Refreshing</item>
+        <item>Soft</item>
+        <item>Hot</item>
+        <item>Spicy</item>
+        <item>Sweet</item>
+        <item>Bitter</item>
+        <item>Crushy</item>
+        <item>Creamy</item>
+        <item>Aromatic</item>
+    </string-array>
+    <string-array name="categories_recipe">
+        <item>Any</item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Appetizer</item>
+    </string-array>
+    <string-array name="order_by_categories_recipe">
+        <item>Any</item>
+        <item>Name</item>
+        <item>Duration</item>
+        <item>Score</item>
+        <item>Difficulty</item>
+    </string-array>
+    <string-array name="order_by_categories_ingredient">
+        <item>Any</item>
+        <item>Name</item>
+        <item>Name reverse</item>
+        <item>NRV</item>
+        <item>NRV reverse</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

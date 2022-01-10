@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/imageIngredientList"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/no_image" />
+
+    <TextView
+        android:id="@+id/nameIngredientList"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/imageIngredientList"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-black"
+        android:gravity="left"
+        android:maxLines="1"
+        android:text="@string/ingredient_name"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageIngredientList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descriptionIngredientList"
+        android:layout_width="234dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/nameIngredientList"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/imageIngredientList"
+        android:ellipsize="end"
+        android:gravity="top|left"
+        android:maxLines="4"
+        android:singleLine="false"
+        android:text="@string/ingredient_description"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imageIngredientList"
+        app:layout_constraintTop_toBottomOf="@+id/nameIngredientList" />
+
+    <TextView
+        android:id="@+id/ingredientNRVList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descriptionIngredientList"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/imageIngredientList"
+        android:fontFamily="sans-serif"
+        android:text="@string/nutritional_value"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionIngredientList" />
+
+    <TextView
+        android:id="@+id/ingredientCategoriesList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ingredientNRVList"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/imageIngredientList"
+        android:fontFamily="sans-serif"
+        android:text="@string/product_categories"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageIngredientList"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientNRVList" />
+
+</RelativeLayout>

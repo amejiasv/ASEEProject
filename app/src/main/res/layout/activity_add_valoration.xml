@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddValorationActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecipeComments"
+        android:layout_width="412dp"
+        android:layout_height="402dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="12dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/commentTextbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+    <Button
+        android:id="@+id/bAddComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/add_comment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:titleTextColor="@color/white" />
+
+    <RatingBar
+        android:id="@+id/ratingDifficultyComment"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:numStars="5"
+        app:layout_constraintBottom_toTopOf="@+id/bAddComment"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingScoreComment"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="8dp"
+        android:numStars="5"
+        app:layout_constraintBottom_toTopOf="@+id/bAddComment"
+        app:layout_constraintStart_toEndOf="@+id/ratingDifficultyComment" />
+
+    <TextView
+        android:id="@+id/difficultyLabelComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/difficulty"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingDifficultyComment"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreLabelComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/score"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingScoreComment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toEndOf="@+id/difficultyLabelComment" />
+
+    <EditText
+        android:id="@+id/commentTextbox"
+        android:layout_width="374dp"
+        android:layout_height="104dp"
+        android:layout_marginBottom="92dp"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="start"
+        android:hint="@string/comment"
+        android:inputType="textMultiLine"
+        android:padding="6dp"
+        android:singleLine="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bAddComment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/noValorationsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_valorations"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewRecipeComments"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerViewRecipeComments"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewRecipeComments"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

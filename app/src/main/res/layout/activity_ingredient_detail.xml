@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.IngredientDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ingredientCategoriesLabelDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/product_categories"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientNRVLabelDetail" />
+
+    <TextView
+        android:id="@+id/ingredientCategoriesDetail"
+        android:layout_width="212dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ingredientCategoriesLabelDetail"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionIngredientDetail" />
+
+    <TextView
+        android:id="@+id/ingredientNRVDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:gravity="left"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ingredientNRVLabelDetail"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionIngredientDetail" />
+
+    <TextView
+        android:id="@+id/ingredientNRVLabelDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/nutritional_value"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionIngredientDetail" />
+
+    <TextView
+        android:id="@+id/descriptionIngredientDetail"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top|left"
+        android:text="@string/ingredient_description"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientNameDetail" />
+
+    <TextView
+        android:id="@+id/ingredientNameDetail"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="left"
+        android:text="@string/ingredient_name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageIngredientDetail" />
+
+    <ImageView
+        android:id="@+id/imageIngredientDetail"
+        android:layout_width="368dp"
+        android:layout_height="336dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        app:srcCompat="@drawable/no_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>
